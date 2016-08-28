@@ -17,10 +17,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    h3 {
+      padding: 3rem 0;
+    }
   }
 
   button {
-    margin: 0 3rem;
+    margin: 1rem 8rem;
+    border: 1px solid white;
+    background: #2B7FF2;
+    border-radius: .3rem;
+    transition: all, .5s, ease;
+    width: 10em;
+    height: 2em;
+  }
+
+  button:hover{
+    background-color: #fff;
+    color: #2B7FF2;
   }
 }
 
