@@ -9,6 +9,11 @@ body {
 }
 
 
+p {
+  color:#777;
+}
+
+
 .c-frontpage {
   header {
     background-color: #2B7FF2;
@@ -39,8 +44,16 @@ body {
   }
 }
 
-footer {
+.c-footer{
   text-align: left;
   background: #203046;
   color: #fff;
+
+  .c-footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
 }
