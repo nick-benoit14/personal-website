@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import "normalize";
+
+body {
+  background: #F3F8FE;
+  text-align: center;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+
+.c-frontpage {
+  header {
+    background-color: #2B7FF2;
+    height: 90vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    margin: 0 3rem;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
