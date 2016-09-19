@@ -8,7 +8,6 @@ body {
   font-size: 1em;
 }
 
-
 p {
   color:#777;
 }
@@ -28,7 +27,7 @@ p {
     }
   }
 
-  button {
+  a {
     margin: 1rem 8rem;
     border: 1px solid white;
     background: #2B7FF2;
@@ -36,9 +35,16 @@ p {
     transition: all, .5s, ease;
     width: 10em;
     height: 2em;
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-top: .3rem;
   }
+  
+  a:link{text-decoration: none;}
+  a:visited{text-decoration: none; color:inherit;}
 
-  button:hover{
+  a:hover{
     background-color: #fff;
     color: #2B7FF2;
   }
