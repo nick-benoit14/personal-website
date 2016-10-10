@@ -23,6 +23,12 @@ page "/", :layout => "frontpage"
 ###
 
 activate :blog do |blog|
+   blog.name = "main"
+   blog.prefix = "main"
+end
+
+
+activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
    blog.name = "blog"
    blog.prefix = "blog"
