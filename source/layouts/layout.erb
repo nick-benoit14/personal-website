@@ -8,6 +8,9 @@
     <title>Nick Benoit</title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
     <%= stylesheet_link_tag :site %>
+    <%= stylesheet_link_tag "bootstrap.min" %>
+    <%= stylesheet_link_tag "font-awesome-4.6.3/css/font-awesome.min" %>
+
   </head>
   <body>
     <header>
@@ -16,7 +19,7 @@
     <div id="main" role="main">
       <%= yield %>
     </div>
-<!-- 
+<!--
     <footer>
       <div>
         <h2>Recent Articles</h2>
