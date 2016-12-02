@@ -1,3 +1,4 @@
+// Form Validation
 function isValidEmail(val){
   return val.match(/.+@.+\.[a-z]+/);
 }
@@ -17,6 +18,16 @@ function validateInput(successClass, errorClass, validator){
   }
 }
 
+// Form resonse
+
+function successfulMessage(){
+  return '<h3 style="color:green;">Message successfully sent!</h3>'
+}
+
+function unsuccessfulMessage(){
+  return '<h3 style="color:red;">Message was not successfully sent!</h3>'
+}
+
 function getFormData(contact){
   return {
     name: contact.contactName.value,
@@ -26,10 +37,11 @@ function getFormData(contact){
 }
 
 function handlePostContactResponse(resp){
+  var result = document.getElementById('result');
   if(resp.target.status == 200){
-    return alert("Your message was successfully sent!");
+    return result.innerHTML = successfulMessage();
   }
-  alert("Your message failed to send!");
+  result.innerHTML = unsuccessfulMessage();
 }
 
 function postContact(contact){
@@ -46,6 +58,9 @@ function submitContact(contact){
     postContact(data);
   }
 }
+
+
+// Create event listeners
 
 function addEventListeners(){
   var contactName = document.getElementById('contact-name');
@@ -84,6 +99,7 @@ function addEventListeners(){
       contactMessage
     });
   }
-
 }
+
+
 addEventListeners();
