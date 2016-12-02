@@ -20,6 +20,17 @@ function validateInput(successClass, errorClass, validator){
 
 // Form resonse
 
+function hasValidInput(){
+  var contactName = document.getElementById('contact-name');
+  var contactEmail = document.getElementById('contact-email');
+  var contactMessage = document.getElementById('contact-message');
+  return (
+    isValidName(contactName.value) &&
+    isValidEmail(contactEmail.value) &&
+    isValidName(contactMessage.value)
+  );
+}
+
 function successfulMessage(){
   return '<h3 style="color:green;">Message successfully sent!</h3>'
 }
@@ -55,7 +66,10 @@ function postContact(contact){
 function submitContact(contact){
   return function(){
     var data = getFormData(contact);
-    postContact(data);
+    if(hasValidInput()){
+      return postContact(data);
+    }
+    alert("Inputs are not valid");
   }
 }
 
@@ -100,6 +114,5 @@ function addEventListeners(){
     });
   }
 }
-
 
 addEventListeners();
